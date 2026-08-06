@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vijeta S. — UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ===== Hero ===== -->
+<header id="home">
+  <div class="hero-inner">
+
+    <div class="hero-visual">
+      <div class="photo-frame">
+        <img id="profileImg" src="images/profile.jpg" alt="Vijeta S." onerror="this.onerror=null; this.style.display='none'; document.getElementById('profileFallback').style.display='flex';">
+        <div class="photo-fallback" id="profileFallback"><span>VS</span></div>
+      </div>
+      <span class="stamp stamp-1">UI</span>
+      <span class="stamp stamp-2">UX</span>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-badge">Available for freelance projects</span>
+      <h1>Hi, I'm <em>Vijeta.</em><br>UI/UX Designer</h1>
+      <div class="hero-role">I craft <span class="typed"></span></div>
+      <p>I design intuitive, human-centered digital experiences that turn complex problems into delightful, accessible products — from wireframe to polished, pixel-perfect interface.</p>
+      <div class="hero-actions">
+        <a href="resume.pdf" download class="btn btn-dark"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">Years Experience</div></div>
+        <div class="stat"><div class="num" data-count="40">0</div><div class="lbl">Projects Shipped</div></div>
+        <div class="stat"><div class="num" data-count="25">0</div><div class="lbl">Happy Clients</div></div>
+      </div>
+    </div>
+
+  </div>
+</header>
+
+<!-- ===== Skills ===== -->
+<section id="skills">
+  <div class="section-head reveal">
+    <span class="eyebrow">Toolbox</span>
+    <h2>Skills &amp; Tools</h2>
+    <p>The tools and techniques I use every day to bring ideas from concept to launch.</p>
+  </div>
+  <div class="skills-wrap">
+    <div class="skill-card reveal"><div class="tool"><i class="fab fa-figma"></i></div><h4>Figma</h4><div class="bar"><span data-level="95"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-layer-group"></i></div><h4>Adobe XD</h4><div class="bar"><span data-level="88"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-pen-nib"></i></div><h4>Illustrator</h4><div class="bar"><span data-level="82"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-image"></i></div><h4>Photoshop</h4><div class="bar"><span data-level="85"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-brain"></i></div><h4>UX Research</h4><div class="bar"><span data-level="90"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-code"></i></div><h4>HTML / CSS</h4><div class="bar"><span data-level="78"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-clone"></i></div><h4>Prototyping</h4><div class="bar"><span data-level="93"></span></div></div>
+    <div class="skill-card reveal"><div class="tool"><i class="fas fa-users"></i></div><h4>User Testing</h4><div class="bar"><span data-level="87"></span></div></div>
+  </div>
+</section>
+
+<!-- ===== Work ===== -->
+<section id="work">
+  <div class="section-head reveal">
+    <span class="eyebrow">Selected Work</span>
+    <h2>Featured Projects</h2>
+    <p>A selection of projects I'm proud of — from mobile apps to complete design systems.</p>
+  </div>
+  <div class="projects-grid">
+    <article class="project reveal">
+      <div class="project-cover">
+        <img src="images/project-1.jpg" alt="Fintech Banking App" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+      </div>
+      <div class="project-body">
+        <h3>Fintech Banking App</h3>
+        <p>End-to-end redesign of a mobile banking app, improving onboarding completion by 42% through simplified flows.</p>
+        <div class="tag-row"><span class="tag">Mobile App</span><span class="tag">UX Research</span><span class="tag">Prototype</span></div>
+        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+    <article class="project reveal">
+      <div class="project-cover">
+        <img src="images/project-2.jpg" alt="E-commerce Design System" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+      </div>
+      <div class="project-body">
+        <h3>E-commerce Design System</h3>
+        <p>Scalable design system with 120+ components, cutting product UI production time by 55% across three teams.</p>
+        <div class="tag-row"><span class="tag">Design System</span><span class="tag">Figma</span><span class="tag">Tokens</span></div>
+        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+    <article class="project reveal">
+      <div class="project-cover">
+        <img src="images/project-3.jpg" alt="Health & Fitness Dashboard" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
+        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+      </div>
+      <div class="project-body">
+        <h3>Health &amp; Fitness Dashboard</h3>
+        <p>Data-rich wellness dashboard translating complex health metrics into clear, actionable insights.</p>
+        <div class="tag-row"><span class="tag">Dashboard</span><span class="tag">Data Viz</span><span class="tag">Web App</span></div>
+        <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== Testimonials ===== -->
+<section id="testimonials">
+  <div class="section-head reveal">
+    <span class="eyebrow">Kind Words</span>
+    <h2>What Clients Say</h2>
+  </div>
+  <div class="testi-grid">
+    <div class="testi reveal">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Vijeta transformed our clunky product into something our users actually love. Onboarding doubled within a month."</p>
+      <div class="testi-author"><div class="testi-avatar">AK</div><div><div class="name">Arjun Kapoor</div><div class="role">CEO, Finly</div></div></div>
+    </div>
+    <div class="testi reveal">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Rare blend of design taste and strategic thinking. The design system she built still powers our entire product suite."</p>
+      <div class="testi-author"><div class="testi-avatar">SM</div><div><div class="name">Sara Mehta</div><div class="role">Product Lead, Cartly</div></div></div>
+    </div>
+    <div class="testi reveal">
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+      <p>"Deadlines respected, communication flawless, and every screen shipped was pixel-perfect. An absolute pleasure."</p>
+      <div class="testi-author"><div class="testi-avatar">RS</div><div><div class="name">Rahul Shah</div><div class="role">Founder, PulseHealth</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Contact ===== -->
+<section id="contact">
+  <div class="section-head reveal">
+    <span class="eyebrow">Let's Connect</span>
+    <h2>Have a project in mind?</h2>
+    <p>Tell me about your product — I'd love to help you design something great.</p>
+  </div>
+  <div class="contact-card reveal">
+    <h3>Let's Talk</h3>
+    <p>Fill out the form and I'll get back to you within 24 hours.</p>
+    <form class="contact-form" id="contactForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@email.com" required>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="What's this about?">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+      </div>
+      <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+      <p class="form-note" id="formNote"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p>© <span id="year"></span> Vijeta S. — Designed &amp; built by <a href="#home">V.Design</a></p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
