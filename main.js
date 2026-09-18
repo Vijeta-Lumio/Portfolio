@@ -76,30 +76,6 @@
   targets.forEach((el) => observer.observe(el));
 })();
 
-/* ===== Skill bars animate when visible ===== */
-(function initSkillBars() {
-  const bars = document.querySelectorAll('.bar span');
-
-  if (!bars.length) return;
-  if (!('IntersectionObserver' in window)) {
-    bars.forEach((el) => (el.style.width = el.dataset.level + '%'));
-    return;
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.width = entry.target.dataset.level + '%';
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
-  bars.forEach((el) => observer.observe(el));
-})();
-
 /* ===== Counter animation ===== */
 (function initCounters() {
   const counters = document.querySelectorAll('[data-count]');
@@ -159,15 +135,113 @@
   });
 })();
 
-/* ===== Contact form ===== */
-(function initContactForm() {
-  const form = document.getElementById('contactForm');
-  const note = document.getElementById('formNote');
-  if (!form || !note) return;
+/* ===== Fire trail (fine pointers only) ===== */
+(function initFireTrail() {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    note.textContent = "Thanks! Your message has been sent. I'll reply within 24 hours.";
-    form.reset();
+  const DOT_COUNT = 18;
+  const dots = [];
+
+  const base = document.createElement('span');
+  base.className = 'trail-dot';
+  base.style.width = '26px';
+  base.style.height = '26px';
+  document.body.appendChild(base);
+
+  for (let i = 0; i < DOT_COUNT; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'trail-dot';
+    const t = i / (DOT_COUNT - 1);
+    const size = 22 * (1 - t * 0.85);
+    dot.style.width = size + 'px';
+    dot.style.height = size + 'px';
+    dot.style.opacity = String(0.85 * (1 - t));
+    dot.style.left = '0px';
+    dot.style.top = '0px';
+    document.body.appendChild(dot);
+    dots.push({ el: dot, x: 0, y: 0 });
+  }
+
+  let tx = 0;
+  let ty = 0;
+  let hasMouse = false;
+  const LERP = 0.18;
+
+  window.addEventListener('mousemove', (e) => {
+    tx = e.clientX;
+    ty = e.clientY;
+    if (!hasMouse) {
+      hasMouse = true;
+      base.style.left = tx + 'px';
+      base.style.top = ty + 'px';
+      dots.forEach((d) => { d.x = tx; d.y = ty; });
+    }
   });
+
+  function render() {
+    if (!hasMouse) { requestAnimationFrame(render); return; }
+
+    base.style.left = tx + 'px';
+    base.style.top = ty + 'px';
+
+    let px = tx;
+    let py = ty;
+    for (const dot of dots) {
+      dot.x += (px - dot.x) * LERP;
+      dot.y += (py - dot.y) * LERP;
+      dot.el.style.left = dot.x + 'px';
+      dot.el.style.top = dot.y + 'px';
+      px = dot.x;
+      py = dot.y;
+    }
+
+    requestAnimationFrame(render);
+  }
+  requestAnimationFrame(render);
+})();
+
+/* ===== Smooth scroll for in-page anchors ===== */
+(function initSmoothScroll() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      const id = link.getAttribute('href');
+      if (!id || id.length < 2) return;
+      const target = document.getElementById(id.slice(1));
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+})();
+
+/* ===== Scroll spy navigation ===== */
+(function initScrollSpy() {
+  const links = document.querySelectorAll('.nav-link');
+  if (!links.length) return;
+
+  const NAV_IDS = ['home', 'experience', 'about', 'work', 'contact'];
+  const sections = NAV_IDS
+    .map((id) => document.getElementById(id))
+    .filter(Boolean);
+
+  let currentNav = 'home';
+
+  const active = (id) => {
+    if (id === currentNav) return;
+    currentNav = id;
+    links.forEach((l) => l.classList.toggle('active', l.getAttribute('href') === '#' + id));
+  };
+
+  const onScroll = () => {
+    const fromTop = window.scrollY + 130;
+    let lastId = '';
+    sections.forEach((s) => {
+      if (s.offsetTop <= fromTop) lastId = s.id;
+    });
+    if (NAV_IDS.includes(lastId)) active(lastId);
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 })();

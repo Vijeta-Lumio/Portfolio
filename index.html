@@ -14,54 +14,127 @@
 <div class="grain"></div>
 <div class="cursor-glow" id="cursorGlow"></div>
 
+<!-- ===== Navigation ===== -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">Vijeta Sinha</a>
+    <ul class="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#work" class="nav-link">Projects</a></li>
+    </ul>
+    <a href="#contact" class="nav-link nav-cta">Contact</a>
+  </div>
+</nav>
+
 <!-- ===== Hero ===== -->
 <header id="home">
   <div class="hero-inner">
 
-    <div class="hero-visual">
-      <div class="photo-frame">
-        <img id="profileImg" src="images/profile.jpg" alt="Vijeta S." onerror="this.onerror=null; this.style.display='none'; document.getElementById('profileFallback').style.display='flex';">
-        <div class="photo-fallback" id="profileFallback"><span>VS</span></div>
-      </div>
-      <span class="stamp stamp-1">UI</span>
-      <span class="stamp stamp-2">UX</span>
-    </div>
-
     <div class="hero-content">
-      <span class="hero-badge">Available for freelance projects</span>
-      <h1>Hi, I'm <em>Vijeta.</em><br>UI/UX Designer</h1>
+      <h1>Hi, I'm <em>Vijeta.</em><br><span class="nowrap">UI/UX Designer</span></h1>
       <div class="hero-role">I craft <span class="typed"></span></div>
       <p>I design intuitive, human-centered digital experiences that turn complex problems into delightful, accessible products — from wireframe to polished, pixel-perfect interface.</p>
       <div class="hero-actions">
-        <a href="resume.pdf" download class="btn btn-dark"><i class="fas fa-download"></i> Download Resume</a>
+        <a href="assets/Ui_Ux_ Resume_Vijeta Sinha.pdf" download class="btn btn-dark"><i class="fas fa-download"></i> Download Resume</a>
         <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Get in Touch</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><div class="num" data-count="4">0</div><div class="lbl">Years Experience</div></div>
-        <div class="stat"><div class="num" data-count="40">0</div><div class="lbl">Projects Shipped</div></div>
-        <div class="stat"><div class="num" data-count="25">0</div><div class="lbl">Happy Clients</div></div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-stage">
+
+        <div class="profile-card">
+
+          <svg class="profile-outline" viewBox="0 0 220 400" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M 28 22 C 15 20 10 28 11 42 Q 12 70 11 105 T 12 210 T 12 315 C 12 336 18 352 34 354 Q 80 358 140 357 T 198 354 C 214 352 218 338 217 318 Q 217 280 217 200 T 217 58 C 217 36 210 22 194 20 Q 120 14 28 22 Z" fill="none" stroke="#123B63" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+            <path d="M 28 22 C 15 20 10 28 11 42 Q 12 70 11 105 T 12 210 T 12 315 C 12 336 18 352 34 354 Q 80 358 140 357 T 198 354 C 214 352 218 338 217 318 Q 217 280 217 200 T 217 58 C 217 36 210 22 194 20 Q 120 14 28 22 Z" fill="none" stroke="#123B63" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55" transform="translate(3 2)"/>
+          </svg>
+
+          <div class="frame-inner">
+            <img class="profile-photo" src="assets/ChatGPT Image Sep 18, 2026, 03_21_51 PM.png" alt="Vijeta Sinha">
+          </div>
+
+          <span class="profile-pill pill-open"><span class="pill-dot"></span>Open to work</span>
+          <span class="profile-pill pill-role">✱ UI/UX Designer</span>
+
+        </div>
+
       </div>
     </div>
 
   </div>
 </header>
 
-<!-- ===== Skills ===== -->
-<section id="skills">
+<!-- ===== Section divider ===== -->
+<div class="section-divider" aria-hidden="true"></div>
+
+<!-- ===== Experience ===== -->
+<section id="experience">
   <div class="section-head reveal">
-    <span class="eyebrow">Toolbox</span>
-    <h2>Skills &amp; Tools</h2>
-    <p>The tools and techniques I use every day to bring ideas from concept to launch.</p>
+    <span class="eyebrow">Career</span>
+    <h2>Work Experience</h2>
+    <p>Places where I turned ideas into polished, human-centered designs.</p>
   </div>
-  <div class="skills-wrap">
-    <div class="skill-card reveal"><div class="tool"><i class="fab fa-figma"></i></div><h4>Figma</h4><div class="bar"><span data-level="95"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-layer-group"></i></div><h4>Adobe XD</h4><div class="bar"><span data-level="88"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-pen-nib"></i></div><h4>Illustrator</h4><div class="bar"><span data-level="82"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-image"></i></div><h4>Photoshop</h4><div class="bar"><span data-level="85"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-brain"></i></div><h4>UX Research</h4><div class="bar"><span data-level="90"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-code"></i></div><h4>HTML / CSS</h4><div class="bar"><span data-level="78"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-clone"></i></div><h4>Prototyping</h4><div class="bar"><span data-level="93"></span></div></div>
-    <div class="skill-card reveal"><div class="tool"><i class="fas fa-users"></i></div><h4>User Testing</h4><div class="bar"><span data-level="87"></span></div></div>
+  <div class="experience-list">
+
+    <article class="experience-card reveal">
+      <div class="experience-head">
+        <div>
+          <h3>UI/UX Designer</h3>
+          <div class="experience-company">Act Ozibok Tech Pvt Ltd</div>
+        </div>
+        <span class="experience-period">Feb 2026 — May 2026</span>
+      </div>
+      <ul class="experience-points">
+        <li>Created client portfolio pages in Notion.</li>
+        <li>Replicated existing UI designs.</li>
+        <li>Designed home page layouts for website projects.</li>
+        <li>Collaborated with the team to review and refine UI designs.</li>
+      </ul>
+    </article>
+
+    <article class="experience-card reveal">
+      <div class="experience-head">
+        <div>
+          <h3>UI/UX Design Intern</h3>
+          <div class="experience-company">AKDENAR Private Limited</div>
+        </div>
+        <span class="experience-period">Aug 2025 — Dec 2025</span>
+      </div>
+      <ul class="experience-points">
+        <li>Design intuitive interfaces and seamless user flows for the B2B e-commerce platform.</li>
+        <li>Design the Seller-side dashboard interface including the homepage and clear navigation designs.</li>
+        <li>Design several promotional sections.</li>
+        <li>Work on seller and admin support features such as catalogue listing and catalogue requests, supported with interactive prototyping.</li>
+      </ul>
+    </article>
+
+  </div>
+</section>
+
+<!-- ===== About ===== -->
+<section id="about">
+  <div class="section-head about-head reveal">
+    <span class="eyebrow">About Me</span>
+    <h2>Designing with purpose</h2>
+  </div>
+  <div class="about-layout">
+    <div class="about-text reveal">
+    <p>Hi, I'm Vijeta — a UI/UX designer who enjoys turning complex problems into simple, intuitive, and engaging digital experiences.</p>
+    <p>I've worked on projects across different areas, including productivity tools, work-management experiences, and websites, exploring everything from user flows and wireframes to visual design and prototyping.</p>
+    <p>For me, good design is not just about making something look good — it's about understanding users, solving the right problems, and creating experiences that feel natural and easy to use.</p>
+    <p>Every project has been a chance to learn, experiment, and improve my design skills. I'm curious by nature, enjoy exploring new ideas, and believe there's always something new to learn through design.</p>
+    </div>
+    <aside class="tools-list reveal">
+      <div class="tool-box"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+      <div class="tool-box"><i class="fa-solid fa-pen-ruler"></i><span>FigJam</span></div>
+      <div class="tool-box"><i class="fa-solid fa-note-sticky"></i><span>Notion</span></div>
+      <div class="tool-box"><i class="fa-solid fa-diagram-project"></i><span>Miro</span></div>
+      <div class="tool-box"><i class="fa-solid fa-crop-simple"></i><span>Adobe XD</span></div>
+      <div class="tool-box"><i class="fa-solid fa-vector-square"></i><span>Illustrator</span></div>
+    </aside>
   </div>
 </section>
 
@@ -75,100 +148,68 @@
   <div class="projects-grid">
     <article class="project reveal">
       <div class="project-cover">
-        <img src="images/project-1.jpg" alt="Fintech Banking App" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        <img src="assets/Screenshot 2026-09-15 113637.png" alt="Workpilot" onerror="this.onerror=null; this.style.display='none';">
       </div>
       <div class="project-body">
-        <h3>Fintech Banking App</h3>
-        <p>End-to-end redesign of a mobile banking app, improving onboarding completion by 42% through simplified flows.</p>
-        <div class="tag-row"><span class="tag">Mobile App</span><span class="tag">UX Research</span><span class="tag">Prototype</span></div>
+        <h3>Workpilot</h3>
+        <div class="tag-row"><span class="tag">Web App</span><span class="tag">UX Research</span><span class="tag">Prototype</span></div>
         <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
     <article class="project reveal">
       <div class="project-cover">
-        <img src="images/project-2.jpg" alt="E-commerce Design System" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        <img src="assets/sign page.png" alt="Health Tracker" onerror="this.onerror=null; this.style.display='none';">
       </div>
       <div class="project-body">
-        <h3>E-commerce Design System</h3>
-        <p>Scalable design system with 120+ components, cutting product UI production time by 55% across three teams.</p>
-        <div class="tag-row"><span class="tag">Design System</span><span class="tag">Figma</span><span class="tag">Tokens</span></div>
+        <h3>Health Tracker</h3>
+        <div class="tag-row"><span class="tag">Mobile App</span><span class="tag">UX Design</span><span class="tag">Health</span></div>
         <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
     <article class="project reveal">
       <div class="project-cover">
-        <img src="images/project-3.jpg" alt="Health & Fitness Dashboard" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='block';">
-        <div class="cover-fallback"><i class="fas fa-arrow-up-right-from-square"></i></div>
+        <img src="assets/Screenshot 2026-09-15 115013.png" alt="Candle Website" onerror="this.onerror=null; this.style.display='none';">
       </div>
       <div class="project-body">
-        <h3>Health &amp; Fitness Dashboard</h3>
-        <p>Data-rich wellness dashboard translating complex health metrics into clear, actionable insights.</p>
-        <div class="tag-row"><span class="tag">Dashboard</span><span class="tag">Data Viz</span><span class="tag">Web App</span></div>
+        <h3>Candle Website</h3>
+        <div class="tag-row"><span class="tag">Website</span><span class="tag">Visual Design</span><span class="tag">Figma</span></div>
         <a href="#" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
       </div>
     </article>
-  </div>
-</section>
-
-<!-- ===== Testimonials ===== -->
-<section id="testimonials">
-  <div class="section-head reveal">
-    <span class="eyebrow">Kind Words</span>
-    <h2>What Clients Say</h2>
-  </div>
-  <div class="testi-grid">
-    <div class="testi reveal">
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p>"Vijeta transformed our clunky product into something our users actually love. Onboarding doubled within a month."</p>
-      <div class="testi-author"><div class="testi-avatar">AK</div><div><div class="name">Arjun Kapoor</div><div class="role">CEO, Finly</div></div></div>
-    </div>
-    <div class="testi reveal">
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p>"Rare blend of design taste and strategic thinking. The design system she built still powers our entire product suite."</p>
-      <div class="testi-author"><div class="testi-avatar">SM</div><div><div class="name">Sara Mehta</div><div class="role">Product Lead, Cartly</div></div></div>
-    </div>
-    <div class="testi reveal">
-      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-      <p>"Deadlines respected, communication flawless, and every screen shipped was pixel-perfect. An absolute pleasure."</p>
-      <div class="testi-author"><div class="testi-avatar">RS</div><div><div class="name">Rahul Shah</div><div class="role">Founder, PulseHealth</div></div></div>
-    </div>
   </div>
 </section>
 
 <!-- ===== Contact ===== -->
 <section id="contact">
-  <div class="section-head reveal">
-    <span class="eyebrow">Let's Connect</span>
-    <h2>Have a project in mind?</h2>
-    <p>Tell me about your product — I'd love to help you design something great.</p>
-  </div>
-  <div class="contact-card reveal">
-    <h3>Let's Talk</h3>
-    <p>Fill out the form and I'll get back to you within 24 hours.</p>
-    <form class="contact-form" id="contactForm">
-      <div class="form-row">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" placeholder="Your name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" placeholder="you@email.com" required>
-        </div>
+  <div class="contact-layout reveal">
+    <div class="contact-head">
+      <span class="eyebrow">Let's Connect</span>
+      <h2>There's always a better way to design something.</h2>
+    </div>
+    <div class="contact-item contact-phone">
+      <span class="contact-icon-sm"><i class="fas fa-phone"></i></span>
+      <div>
+        <span class="contact-label">Phone</span>
+        <a href="tel:+919905099177" class="contact-value">+91 99050 99177</a>
       </div>
-      <div class="form-group">
-        <label for="subject">Subject</label>
-        <input type="text" id="subject" placeholder="What's this about?">
+    </div>
+    <div class="contact-item contact-email">
+      <span class="contact-icon-sm"><i class="fas fa-envelope"></i></span>
+      <div>
+        <span class="contact-label">Email</span>
+        <a href="mailto:vijetasinha087@gmail.com" class="contact-value">vijetasinha087@gmail.com</a>
       </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+    </div>
+    <div class="contact-item contact-loc">
+      <span class="contact-icon-sm"><i class="fas fa-globe"></i></span>
+      <div>
+        <span class="contact-label">Location</span>
+        <span class="contact-value">Available Worldwide</span>
       </div>
-      <button type="submit" class="btn btn-dark btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
-      <p class="form-note" id="formNote"></p>
-    </form>
+    </div>
+    <div class="contact-action">
+      <a href="assets/Ui_Ux_ Resume_Vijeta Sinha.pdf" download class="btn btn-dark btn-resume"><i class="fas fa-download"></i> Download Resume</a>
+    </div>
   </div>
 </section>
 
