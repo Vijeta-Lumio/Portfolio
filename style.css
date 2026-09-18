@@ -740,6 +740,15 @@ section:nth-of-type(even) { background: #d4ecf9; }
   transition: color 0.3s ease;
 }
 a.contact-value:hover { color: #5ba3d9; }
+.contact-behance-item {
+  cursor: pointer;
+}
+.contact-behance {
+  transition: color 0.3s ease;
+}
+.contact-behance:hover {
+  color: #5ba3d9;
+}
 .contact-action {
   grid-area: action;
   align-self: end;
